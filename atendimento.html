@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>Café Cheiro de Minas</title>
+
+    <!-- Bootstrap -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    
+    <!-- CSS -->
+    <link href="css/app.css" rel="stylesheet">
+    
+    <!-- jQuery  -->
+    <script src="js/app.js"></script>
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+ </head>
+ <body cz-shortcut-listen="true">
+ 
+	<nav class="navbar navbar-inverse navbar-fixed-top menu_responsivo">
+		<div class="container">
+			<div class="navbar-header">
+				<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+					<span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span>
+				</button>
+				<a class="navbar-brand" href="index.html"><img src="images/logo.png" alt="Logo" width="20"></a>
+			</div>
+			<div id="navbar" class="navbar-collapse collapse">
+				<ul class="nav navbar-nav">
+					<li><a  href="index.html"><span class="icone icone1"></span> Home </a></li>
+					<li><a href="historia.html"><span class="icone icone1"></span> Nossa história</a></li>
+					<li><a href="loja.html"><span class="icone icone1"></span> Loja Virtual</a></li>
+					<li><a href="rotas.html"><span class="icone icone1"></span> Rotas</a></li>
+					<li><a class="menu_atual" href="atendimento.html"><span class="icone icone1"></span> Atendimento</a></li>
+				</ul>
+			</div>
+		</div>
+	</nav>
+
+	<header class="principal">
+		<div class="col-md-10 col-md-offset-1">
+			<div class="col-md-3 text-center-xs  menu_no_responsivo">
+				<a href="index.html"><img src="images/logo.png" alt="Logo" width="75"></a>
+			</div>
+			
+			<div class="col-md-9 text-center-xs  text-right">
+			
+				<div class="row boas-vindas">
+					<p>
+					Olá, Visitante <a href="login.html">entre</a> | <a href="cadastrar.html">cadastre-se</a>
+					<br>
+					<span class="icone"></span> 0 itens
+					</p>
+				</div>
+
+				<nav class="row uppercase menu_no_responsivo">
+				
+					<a  href="index.html">Home <span class="icone icone1"></span></a>
+					<span class="barra"></span>
+					<a href="historia.html">Nossa história <span class="icone icone1"></span></a>
+					<span class="barra"></span>
+					<a href="loja.html">Loja Virtual <span class="icone icone1"></span></a>
+					<span class="barra"></span>
+					<a href="rotas.html">Rotas<span class="icone icone1"></span></a>
+					<span class="barra"></span>
+					<a class="menu_atual" href="atendimento.html"> Atendimento <span class="icone icone3"></span></a>
+			
+				</nav>
+			</div>
+		</div>
+	</header>
+	
+	<div class="clearfix"></div>
+	
+	<section class="conteudo atendimento">
+	
+		<header class="contato-header">&nbsp;</header>
+
+		<div class="col-md-8 col-md-offset-2 text-justify">
+			
+			<br>
+			<span class="text-center">
+		
+				<h1>Atendimento</h1>
+				<h3 class="uppercase">Fale Conosco</h3>
+				<div class="barra_divisao"></div>
+			
+			</span>
+		
+			<div class="row">
+			
+				<div class="col-sm-6">
+				
+					<form action="#" id="contactForm" method="post" class="cafe-form">
+    
+						<div>
+							<div class="form-icon icon1"></div>
+							<input name="nome" id="nome" type="text" placeholder="Qual o seu nome?" required onblur="valida($(this).get(0).id,&quot;[a-zA-Z]{2}&quot;);">
+							<span>Coloque apenas letras, minímo 2 caracters</span>
+						</div>
+						
+						<div>
+							<div class="form-icon icon2"></div>
+							<input name="email" id="email" type="email" placeholder="Qual o seu e-mail?" required onblur="valida($(this).get(0).id,&quot;[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,4}&quot;);">
+							<span>Preencha o <b>email</b> corretamente</span>
+						</div>
+						
+						<div>
+							<div class="form-icon icon3"></div>
+							<input name="telefone" id="telefone" type="tel" placeholder="E o seu telefone?" required onblur="valida($(this).get(0).id,&quot;^[1-9]{2}\ [2-9][0-9]{3,4}\-[0-9]{4}$&quot;);">
+						</div>
+						
+						<div>
+							<div class="form-icon icon4"></div>
+							<textarea id="mensagem" name="mensagem" cols="30" rows="10" placeholder="Sua mensagem." required onblur="valida($(this).get(0).id,&quot;.{5}&quot;);"></textarea>
+							<span class="textareaalerta">Deve ter no minimo 5 caracters</span>
+						</div>
+
+					
+						<div class="text-center">
+							<p class="laranja" style="font-size: 12px;">Todos os campos devem ser preenchidos.</p>
+							
+							<input type="button" value="Enviar" onClick="f_submit();">
+						</div>
+						
+						
+					</form>
+				</div>
+				
+				<div class="col-sm-6">
+					<div class="atendiment-telefone">
+						<h1 class="icon icon1 light">(35) 3441-6666</h1>
+						<p class="laranja">Se preferir, ligue pra gente. 
+						De segunda a sexta, das 8h às 18h.</p>
+						<a class="icon icon2 laranja color-branco" href="mailto:atendimento@cheirodeminas.com.br">atendimento@cheirodeminas.com.br</a>
+					  </div>
+				</div>
+			</div>
+		
+			
+		</div>
+	</section>
+
+	<div class="clearfix"></div>
+	
+	<footer class="text-center">
+		<div class="col-sm-12">
+			<div class="barra_divisao visible-xs"></div>
+			&copy; 2018 - Todos direitos reservados.
+		</div>
+	</footer>
+	
+
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="js/jquery/2.1.4/jquery.min.js"></script>
+    <script src="js/jquery/1.7.7/jquery.mask.min.js"></script>
+	
+	<script src="js/atendimento.js"></script>
+	
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="js/bootstrap.min.js"></script>
+</body>
+</html>

@@ -1,0 +1,347 @@
+
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>Café Cheiro de Minas</title>
+
+    <!-- Bootstrap -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    
+    <!-- CSS -->
+    <link href="css/app.css" rel="stylesheet">
+    
+    <!-- JavaScript -->
+    <script src="js/app.js"></script>
+    
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+ </head>
+ <body cz-shortcut-listen="true">
+ 
+	<nav class="navbar navbar-inverse navbar-fixed-top menu_responsivo">
+		<div class="container">
+			<div class="navbar-header">
+				<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+					<span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span>
+				</button>
+				<a class="navbar-brand" href="index.html"><img src="images/logo.png" alt="Logo" width="20"></a>
+			</div>
+			<div id="navbar" class="navbar-collapse collapse">
+				<ul class="nav navbar-nav">
+					<li><a class="" href="index.html"><span class="icone icone1"></span> Home </a></li>
+					<li><a href="historia.html"><span class="icone icone1"></span> Nossa história</a></li>
+					<li><a href="loja.html"><span class="icone icone1"></span> Loja Virtual</a></li>
+					<li><a href="rotas.html"><span class="icone icone1"></span> Rotas</a></li>
+					<li><a href="atendimento.html"><span class="icone icone1"></span> Atendimento</a></li>
+				</ul>
+			</div>
+		</div>
+	</nav>
+
+	<header class="principal">
+		<div class="col-md-10 col-md-offset-1">
+			<div class="col-md-3 text-center-xs  menu_no_responsivo">
+				<a href="index.html"><img src="images/logo.png" alt="Logo" width="75"></a>
+			</div>
+			
+			<div class="col-md-9 text-center-xs  text-right">
+			
+				<div class="row boas-vindas">
+					<p>
+					Olá, Visitante <a href="login.html">entre</a> | <a href="cadastrar.html">cadastre-se</a>
+					<br>
+					<span class="icone"></span> 0 itens
+					</p>
+				</div>
+
+				<nav class="row uppercase menu_no_responsivo">
+				
+					<a class="" href="index.html">Home <span class="icone icone1"></span></a>
+					<span class="barra"></span>
+					<a href="historia.html">Nossa história <span class="icone icone1"></span></a>
+					<span class="barra"></span>
+					<a href="loja.html">Loja Virtual <span class="icone icone1"></span></a>
+					<span class="barra"></span>
+					<a href="rotas.html">Rotas<span class="icone icone1"></span></a>
+					<span class="barra"></span>
+					<a href="atendimento.html"> Atendimento <span class="icone icone3"></span></a>
+			
+				</nav>
+			</div>
+		</div>
+	</header>
+	
+	<div class="clearfix"></div>
+	
+	<section class="conteudo cadastrar color-preto">
+		<div class="row">
+			<div class="col-sm-10 col-sm-offset-1 col-md-8 col-md-offset-2">
+
+				<form action="#" id="form_cadastro" method="POST">
+			
+					<!-- ----------------------------------------------------
+					  -- INFORMAÇÕES PESSOAIS
+					  -- ---------------------------------------------------->
+					<section id="InformacaoPessoal">
+					
+						<header class="col-sm-12">Informações Pessoais</header>
+						
+						<!--Tipo de empresa-->
+						<div id="pessoa_tipo" class="cod-sm-12 text-center">
+							<input type="radio" name="optionsRadios" style="width: 20px;" id="option1" value="pf" checked> <label for="option1">  Pessoa Física</label>
+							&nbsp;&nbsp;
+							<input type="radio" name="optionsRadios" id="option2" value="pj"> <label for="option2">  Pessoa Jurídica</label> 
+							<br><br>
+						</div>
+						
+						
+						<!--NOME-->
+						<div class="col-sm-6">
+							<label for="nome">* Nome</label>
+							<input required type="text" class="form-control" id="nome" placeholder="Informe o nome" onblur="valida($(this).get(0).id,&quot;[a-zA-Z]{3}&quot;);">
+							<span>Preencha o <b>nome</b> corretamente</span>
+						</div>
+						
+						<!--Sobrenome-->
+						<div class="col-sm-6">
+							<label for="sobrenome">* Sobrenome</label>
+							<input required type="text" class="form-control" id="sobrenome" placeholder="Informe o sobrenome" onblur="valida($(this).get(0).id,&quot;[a-zA-Z]{3}&quot;);">
+							<span>Preencha o <b>sobrenome</b> corretamente</span>
+						</div>
+						
+						<!--Email-->
+						<div class="col-sm-12">
+							<label for="email">* E-mail </label>
+							<input required type="text" class="form-control" id="email" placeholder="exemplo@empresa.com.br" onblur="valida($(this).get(0).id,&quot;[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,4}&quot;);">
+							<span>Preencha o <b>email</b> corretamente</span>
+						</div>
+						
+						<div id="div_pf">
+						
+							<!--CPF-->
+							<div class="col-sm-6">
+								<label for="cpf">* CPF</label>
+								<input required type="text" class="form-control" id="cpf" placeholder="Informe o CPF" data-mask="000.000.000-00" onblur="valida($(this).get(0).id,&quot;[0-9]{3}\.[0-9]{3}\.[0-9]{3}\-[0-9]{2}&quot;);">
+								<span>Preencha o <b>CPF</b> corretamente</span>
+							</div>
+							
+							<!--RG-->
+							<div class="col-sm-6">
+								<label for="rg">RG</label>
+								<input required type="text" class="form-control" id="rg" placeholder="Informe o RG" onblur="valida($(this).get(0).id,&quot;[a-zA-Z0-9.-]{7}&quot;);">
+								<span>Preencha o <b>RG</b> corretamente</span>
+							</div>
+							
+							<!--Profissao-->
+							<div class="col-sm-12">
+								<label for="profissao">* Profissão </label>
+								<input required type="text" class="form-control" id="profissao" placeholder="Informe sua Profissão" onblur="valida($(this).get(0).id,&quot;[a-zA-Z.-]{2}&quot;);">
+								<span>Preencha a <b>profissão</b> corretamente</span>
+							</div>
+						
+						</div>
+						
+						<div id="div_pj" style="display: none">
+						
+							<!--CNPJ-->
+							<div class="col-sm-6">
+								<label for="cnpj">* CNPJ</label>
+								<input required type="text" class="form-control" id="cnpj" placeholder="Informe o CNPJ" data-mask="00.000.000/0000-00" onblur="valida($(this).get(0).id,&quot;([0-9]{2}[\.]?[0-9]{3}[\.]?[0-9]{3}[\/]?[0-9]{4}[-]?[0-9]{2})&quot;);">
+								<span>Preencha o <b>CNPJ</b> corretamente</span>
+							</div>
+							
+							<!--IE-->
+							<div class="col-sm-6">
+								<label for="ie">* IE</label>
+								<input required type="text" class="form-control" id="ie" placeholder="Informe a Inscrição Estadual" data-mask="0000.0000.0000.0000" onblur="valida($(this).get(0).id,&quot;[0-9]{4}.[0-9]{4}.[0-9]{4}.[0-9]{4}&quot;);">
+								<span>Preencha o <b>IE</b> corretamente</span>
+							</div>
+
+							<!--Empresa-->
+							<div class="col-sm-12">
+								<label for="empresa">* Empresa</label>
+								<input required type="text" class="form-control" id="empresa" placeholder="Informe o nome da empresa" onblur="valida($(this).get(0).id,&quot;[a-zA-Z0-1 .-]{2}&quot;);">
+								<span>Preencha a <b>empresa</b> corretamente</span>
+							</div>
+						
+						</div>
+
+					</section>
+					
+					<div class="espaco">&nbsp;</div>
+					
+					<!-- ----------------------------------------------------
+					  -- INFORMAÇÕES DE LOGIN
+					  -- ---------------------------------------------------->
+
+					<section id="InformacaoLogin">
+					
+						<header class="col-sm-12">Informações de Login</header>
+					
+						<!--Senha-->
+						<div class="col-sm-6">
+							<label for="senha">* Senha</label>
+							<input required type="password" class="form-control" id="senha" placeholder="Informe sua senha" onblur="valida($(this).get(0).id,&quot;[a-zA-Z0-9]{6}&quot;);">
+							<span>O campo aceita apenas letras e números, deve ter no minimo 6 caracters</span>
+						</div>
+						
+						<!--Confirmar Senha-->
+						<div class="col-sm-6">
+							<label for="confirmarSenha">* Confirmar Senha</label>
+							<input required type="password" class="form-control" id="confirmarSenha" placeholder="Confirma sua senha" onblur="check_pass();">
+							<span>As senhas não conhecidem</span>
+						</div>
+						
+					</section>
+					
+					<div class="espaco">&nbsp;</div>
+					
+					<!-- ----------------------------------------------------
+					  -- INFORMAÇÕES DE CONTATO
+					  -- ---------------------------------------------------->
+
+					<section id="InformacaoContato">
+					
+						<header class="col-sm-12">Informações de Contato</header>
+
+						<!--CEP-->
+						<div class="col-sm-6">
+							<label for="cep">* CEP</label>
+							<input required type="text" class="form-control" id="cep" placeholder="Informe o CEP" data-mask="00.000-000" onblur="valida($(this).get(0).id,&quot;^[0-9]{2}.[0-9]{3}-[0-9]{3}$&quot;);">
+							<span>Preencha o <b>CEP</b> corretamente</span>
+						</div>
+
+						<!--Endereço-->
+						<div class="col-sm-12">
+							<label for="endereco">* Endereço</label>
+							<input required type="text" class="form-control" id="endereco" placeholder="Rua, avenida, travessa.." onblur="valida($(this).get(0).id,&quot;[a-zA-Z0-1 .-]{2}&quot;);">
+							<span>Deve ter no minímo 2 digitos</span>
+						</div>
+
+						<!--Numero-->
+						<div class="col-sm-6">
+							<label for="numero">* Número</label>
+							<input required type="number" class="form-control" id="numero" placeholder="Informe o número" onblur="valida($(this).get(0).id,&quot;[0-9]{2}&quot;);">
+							<span>Deve ter no minímo 2 digitos</span>
+						</div>
+
+						<!--Complemtento-->
+						<div class="col-sm-6">
+							<label for="complemento">Complemento</label>
+							<input type="text" class="form-control" id="complemento" placeholder="Informe o complemento">
+						</div>
+
+						<!--Bairro-->
+						<div class="col-sm-6">
+							<label for="bairro">* Bairro</label>
+							<input required type="text" class="form-control" id="bairro" placeholder="Informe o bairro" onblur="valida($(this).get(0).id,&quot;[a-zA-Z0-1 .-]{2}&quot;);" >
+							<span id="error-bairro">Deve ter no minímo 2 digitos</span>
+						</div>
+
+						<!--Telefone-->
+						<div class="col-sm-6">
+							<label for="telefone">* Telefone</label>
+							<input required type="tel" class="form-control" id="telefone" placeholder="" onblur="valida($(this).get(0).id,&quot;^[1-9]{2}\ [2-9][0-9]{3,4}\-[0-9]{4}$&quot;);">
+							<span id="error-telefone">Preencha o <b>telefone</b> corretamente</span>
+						</div>
+
+
+						<!--Cidade-->
+						<div class="col-sm-6">
+							<label for="cidade">* Cidade </label>
+							<input required type="text" class="form-control" id="cidade" placeholder="" onblur="valida($(this).get(0).id,&quot;[a-zA-Z0-1 .-]{2}&quot;);">
+							<span id="error-cidade">Preencha a <b>cidade</b> corretamente</span>
+						</div>
+						
+						<!--Estado-->
+						<div class="col-sm-6">
+							<label for="estado">* Estado </label>
+							<select required class="form-control" id="estado" onblur="valida($(this).get(0).id,&quot;[a-zA-Z0-1 .-]{2}&quot;);">
+							
+								<option value="null">( Selecione o estado )</option>
+								<option value="AC">Acre</option>
+								<option value="AL">Alagoas</option>
+								<option value="AP">Amapá</option>
+								<option value="AM">Amazonas</option>
+								<option value="BA">Bahia</option>
+								<option value="CE">Ceará</option>
+								<option value="DF">Distrito Federal</option>
+								<option value="ES">Espírito Santo</option>
+								<option value="GO">Goiás</option>
+								<option value="MA">Maranhão</option>
+								<option value="MT">Mato Grosso</option>
+								<option value="MS">Mato Grosso do Sul</option>
+								<option value="MG">Minas Gerais</option>
+								<option value="PA">Pará</option>
+								<option value="PB">Paraíba</option>
+								<option value="PR">Paraná</option>
+								<option value="PE">Pernambuco</option>
+								<option value="PI">Piauí</option>
+								<option value="RJ">Rio de Janeiro</option>
+								<option value="RN">Rio Grande do Norte</option>
+								<option value="RS">Rio Grande do Sul</option>
+								<option value="RO">Rondônia</option>
+								<option value="RR">Roraima</option>
+								<option value="SC">Santa Catarina</option>
+								<option value="SP">São Paulo</option>
+								<option value="SE">Sergipe</option>
+								<option value="TO">Tocantins</option>
+
+							</select>
+							<span>Selecione um <b>estado</b></span>
+						</div>
+
+					</section>
+					
+
+					<!-- ----------------------------------------------------
+					  -- SUBMIT
+					  -- ---------------------------------------------------->
+					
+					<div class="col-sm-12 text-center">
+						<div class="espaco">&nbsp;</div>
+						
+						<input type="button" value="Cadastrar" onClick="f_submit();"></input>
+						
+					</div>
+
+			
+				</form>
+				
+			</div>
+		</div>
+	</section>
+	
+	<div class="clearfix"></div>
+
+	<footer class="text-center">
+		<div class="col-sm-12">
+			<div class="barra_divisao visible-xs"></div>
+			&copy; 2018 - Todos direitos reservados.
+		</div>
+	</footer>
+	
+
+	<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="js/jquery/2.1.4/jquery.min.js"></script>
+    <script src="js/jquery/1.7.7/jquery.mask.min.js"></script>
+
+	<!-- jQuery -->
+	<script src="js/load.min.js"></script>
+	
+	<script src="js/cadastro.js"></script>
+
+
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="js/bootstrap.min.js"></script>
+</body>
+</html>

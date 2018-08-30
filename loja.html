@@ -1,0 +1,472 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>Café Cheiro de Minas</title>
+
+    <!-- Bootstrap -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    
+    <!-- CSS -->
+    <link href="css/app.css" rel="stylesheet">
+    
+    <!-- JavaScript  -->
+    <script src="js/app.js"></script>
+    
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+ </head>
+ <body cz-shortcut-listen="true">
+ 
+	<nav class="navbar navbar-inverse navbar-fixed-top menu_responsivo">
+		<div class="container">
+			<div class="navbar-header">
+				<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+					<span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span>
+				</button>
+				<a class="navbar-brand" href="index.html"><img src="images/logo.png" alt="Logo" width="20"></a>
+			</div>
+			<div id="navbar" class="navbar-collapse collapse">
+				<ul class="nav navbar-nav">
+					<li><a href="index.html"><span class="icone icone1"></span> Home </a></li>
+					<li><a href="historia.html"><span class="icone icone1"></span> Nossa história</a></li>
+					<li><a class="menu_atual" href="loja.html"><span class="icone icone1"></span> Loja Virtual</a></li>
+					<li><a href="rotas.html"><span class="icone icone1"></span> Rotas</a></li>
+					<li><a href="atendimento.html"><span class="icone icone1"></span> Atendimento</a></li>
+				</ul>
+			</div>
+		</div>
+	</nav>
+
+	<header class="principal">
+		<div class="col-md-10 col-md-offset-1">
+			<div class="col-md-3 text-center-xs  menu_no_responsivo">
+				<a href="index.html"><img src="images/logo.png" alt="Logo" width="75"></a>
+			</div>
+			
+			<div class="col-md-9 text-center-xs  text-right">
+			
+				<div class="row boas-vindas">
+					<p>
+					Olá, Visitante <a href="login.html">entre</a> | <a href="cadastrar.html">cadastre-se</a>
+					<br>
+					<span class="icone"></span> 0 itens
+					</p>
+				</div>
+
+				<nav class="row uppercase menu_no_responsivo">
+				
+					<a href="index.html">Home <span class="icone icone1"></span></a>
+					<span class="barra"></span>
+					<a href="historia.html">Nossa história <span class="icone icone1"></span></a>
+					<span class="barra"></span>
+					<a class="menu_atual" href="loja.html">Loja Virtual <span class="icone icone1"></span></a>
+					<span class="barra"></span>
+					<a href="rotas.html">Rotas<span class="icone icone1"></span></a>
+					<span class="barra"></span>
+					<a href="atendimento.html"> Atendimento <span class="icone icone3"></span></a>
+			
+				</nav>
+			</div>
+		</div>
+	</header>
+	
+	<div class="clearfix"></div>
+	
+	<section class="conteudo loja color-preto">
+	
+		<div class="col-sm-10 col-sm-offset-1">
+			
+			<header class="col-sm-12 uppercase">
+				Escolha seu Produto
+			</header>
+		
+			<nav class="col-sm-3">
+				<span class="uppercase size-10"><b>Filtrar</b></span>
+				<br>
+				<div class="produto-sidebar">
+					<div class="col-left sidebar" id="side-filtros">
+						
+						<ul class="produto-filtro">
+							<li codigo="1" class="is-current">Todos</li>
+							<li codigo="2"> Torrado e Moído</li>
+							<li codigo="3"> Torrado em Grãos</li>
+							<li codigo="4"> Sacas</li>
+							<li codigo="5"> Descafeinado</li>
+							<li codigo="6"> Reserva Especial</li>
+						</ul>
+						
+					</div>
+				</div>
+			</nav>
+			
+			<div class="col-sm-9">
+				<div id="produtos-itens" class="row">
+				<!--Torrado em graos-->
+					<div id="item" codigo="3" class="col-sm-6 col-md-4">
+						<div class="thumbnail">
+							<img data-src="holder.js/100%x200" alt="Café Verde" style="height: 200px; width: 100%; display: block;" src="images/cafe-verde.jpg" data-holder-rendered="true">
+							<div class="caption">
+								<h3 class="text-center color-beje" id="thumbnail-label">Café Verde<a class="anchorjs-link" href="#thumbnail-label"><span class="anchorjs-icon"></span></a></h3>
+								
+								<p id="teste">Café Verde 5kg. <br> Café Verde em grãos - Café Cheiro de Minas</p>
+								
+								<p class="text-center">
+									<span class="de">De: R$ 70,00</span>&nbsp;&nbsp;Por: <span class="por">R$ 55,00</span>
+								</p>
+								
+								<br>
+								
+								<p class="text-center">
+									<button type="button" class="btn btn-default" data-toggle="modal" data-target="#myModal"><span class="glyphicon glyphicon-eye-open"></span> Detalhes</button>
+									<a href="#" class="btn btn-success" role="button"><span class="glyphicon glyphicon-plus-sign"></span> Comprar</a> 
+								</p>
+							</div>
+						</div>
+					</div>
+					<!--Torrado em graos 2-->
+					<div id="item" codigo="3" class="col-sm-6 col-md-4">
+						<div class="thumbnail">
+							<img data-src="holder.js/100%x200" alt="Café em grãos" style="height: 200px; width: 100%; display: block;" src="images/cafe-grao.jpg" data-holder-rendered="true">
+							<div class="caption">
+								<h3 class="text-center color-beje" id="thumbnail-label">Café em Grãos <a class="anchorjs-link" href="#thumbnail-label"><span class="anchorjs-icon"></span></a></h3>
+								
+								<p id="teste">Café em grãos 10kg. <br> Café torrado em grãos - Café Cheiro de Minas</p>
+								
+								<p class="text-center">
+									<span class="de">De: R$ 140,00</span>&nbsp;&nbsp;Por: <span class="por">R$ 110,00</span>
+								</p>
+								
+								<br>
+								
+								<p class="text-center">
+									<button type="button" class="btn btn-default" data-toggle="modal" data-target="#myModal"><span class="glyphicon glyphicon-eye-open"></span> Detalhes</button>
+									<a href="#" class="btn btn-success" role="button"><span class="glyphicon glyphicon-plus-sign"></span> Comprar</a> 
+								</p>
+							</div>
+						</div>
+					</div>
+					<!--Torrado em graos 3-->
+					<div id="item" codigo="3" class="col-sm-6 col-md-4">
+						<div class="thumbnail">
+							<img data-src="holder.js/100%x200" alt="Café em grãos" style="height: 200px; width: 100%; display: block;" src="images/cafe-graos3.jpg" data-holder-rendered="true">
+							<div class="caption">
+								<h3 class="text-center color-beje" id="thumbnail-label">Café em Grãos <a class="anchorjs-link" href="#thumbnail-label"><span class="anchorjs-icon"></span></a></h3>
+								
+								<p id="teste">Café em grãos 3kg. <br> Café torrado em grãos - Café Cheiro de Minas</p>
+								
+								<p class="text-center">
+									<span class="de">De: R$ 30,00</span>&nbsp;&nbsp;Por: <span class="por">R$ 20,00</span>
+								</p>
+								
+								<br>
+								
+								<p class="text-center">
+									<button type="button" class="btn btn-default" data-toggle="modal" data-target="#myModal"><span class="glyphicon glyphicon-eye-open"></span> Detalhes</button>
+									<a href="#" class="btn btn-success" role="button"><span class="glyphicon glyphicon-plus-sign"></span> Comprar</a> 
+								</p>
+							</div>
+						</div>
+					</div>
+					<!--Descafeinado-->
+					<div id="item" codigo="5" class="col-sm-6 col-md-4">
+						<div class="thumbnail">
+							<img data-src="holder.js/100%x200" alt="Café Descafeinado" style="height: 200px; width: 100%; display: block;" src="images/cafe-descafeinado.jpg" data-holder-rendered="true">
+							<div class="caption">
+								<h3 class="text-center color-beje" id="thumbnail-label">Café Descafeinado<a class="anchorjs-link" href="#thumbnail-label"><span class="anchorjs-icon"></span></a></h3>
+								
+								<p id="teste">Café em grãos 5kg. <br> Café Descafeinado - Café Cheiro de Minas</p>
+								
+								<p class="text-center">
+									<span class="de">De: R$ 120,00</span>&nbsp;&nbsp;Por: <span class="por">R$ 100,00</span>
+								</p>
+								
+								<br>
+								
+								<p class="text-center">
+									<button type="button" class="btn btn-default" data-toggle="modal" data-target="#myModal"><span class="glyphicon glyphicon-eye-open"></span> Detalhes</button>
+									<a href="#" class="btn btn-success" role="button"><span class="glyphicon glyphicon-plus-sign"></span> Comprar</a> 
+								</p>
+							</div>
+						</div>
+					</div>
+					<!--Descafeinado 2-->
+					<div id="item" codigo="5" class="col-sm-6 col-md-4">
+						<div class="thumbnail">
+							<img data-src="holder.js/100%x200" alt="Café Descafeinado" style="height: 200px; width: 100%; display: block;" src="images/cafe-descafeinado2.jpg" data-holder-rendered="true">
+							<div class="caption">
+								<h3 class="text-center color-beje" id="thumbnail-label">Café Descafeinado<a class="anchorjs-link" href="#thumbnail-label"><span class="anchorjs-icon"></span></a></h3>
+								
+								<p id="teste">Café em grãos 10kg. <br> Café Descafeinado - Café Cheiro de Minas</p>
+								
+								<p class="text-center">
+									<span class="de">De: R$ 90,00</span>&nbsp;&nbsp;Por: <span class="por">R$ 70,00</span>
+								</p>
+								
+								<br>
+								
+								<p class="text-center">
+									<button type="button" class="btn btn-default" data-toggle="modal" data-target="#myModal"><span class="glyphicon glyphicon-eye-open"></span> Detalhes</button>
+									<a href="#" class="btn btn-success" role="button"><span class="glyphicon glyphicon-plus-sign"></span> Comprar</a> 
+								</p>
+							</div>
+						</div>
+					</div>
+					<!--Descafeinado 3-->
+					<div id="item" codigo="5" class="col-sm-6 col-md-4">
+						<div class="thumbnail">
+							<img data-src="holder.js/100%x200" alt="Café Descafeinado" style="height: 200px; width: 100%; display: block;" src="images/cafe-descafeinado3.jpg" data-holder-rendered="true">
+							<div class="caption">
+								<h3 class="text-center color-beje" id="thumbnail-label">Café Descafeinado<a class="anchorjs-link" href="#thumbnail-label"><span class="anchorjs-icon"></span></a></h3>
+								
+								<p id="teste">Café em grãos 3kg. <br> Café Descafeinado - Café Cheiro de Minas</p>
+								
+								<p class="text-center">
+									<span class="de">De: R$ 25,00</span>&nbsp;&nbsp;Por: <span class="por">R$ 17,00</span>
+								</p>
+								
+								<br>
+								
+								<p class="text-center">
+									<button type="button" class="btn btn-default" data-toggle="modal" data-target="#myModal"><span class="glyphicon glyphicon-eye-open"></span> Detalhes</button>
+									<a href="#" class="btn btn-success" role="button"><span class="glyphicon glyphicon-plus-sign"></span> Comprar</a> 
+								</p>
+							</div>
+						</div>
+					</div>
+					<!--Cafe Moido-->
+					<div id="item" codigo="2" class="col-sm-6 col-md-4">
+						<div class="thumbnail">
+							<img data-src="holder.js/100%x200" alt="Cafe Moido" style="height: 200px; width: 100%; display: block;" src="images/cafe-moido.jpg" data-holder-rendered="true">
+							<div class="caption">
+								<h3 class="text-center color-beje" id="thumbnail-label">Café Moido<a class="anchorjs-link" href="#thumbnail-label"><span class="anchorjs-icon"></span></a></h3>
+								
+								<p id="teste">Café em moido 5kg. <br> Café torrado e moido -  Café Cheiro de Minas</p>
+								
+								<p class="text-center">
+									<span class="de">De: R$ 90,00</span>&nbsp;&nbsp;Por: <span class="por">R$ 65,00</span>
+								</p>
+								
+								<br>
+								
+								<p class="text-center">
+									<button type="button" class="btn btn-default" data-toggle="modal" data-target="#myModal"><span class="glyphicon glyphicon-eye-open"></span> Detalhes</button>
+									<a href="#" class="btn btn-success" role="button"><span class="glyphicon glyphicon-plus-sign"></span> Comprar</a> 
+								</p>
+							</div>
+						</div>
+					</div>
+					<!--Cafe Moido 2-->
+					<div id="item" codigo="2" class="col-sm-6 col-md-4">
+						<div class="thumbnail">
+							<img data-src="holder.js/100%x200" alt="Cafe Moido" style="height: 200px; width: 100%; display: block;" src="images/cafe-moido2.jpg" data-holder-rendered="true">
+							<div class="caption">
+								<h3 class="text-center color-beje" id="thumbnail-label">Café Moido<a class="anchorjs-link" href="#thumbnail-label"><span class="anchorjs-icon"></span></a></h3>
+								
+								<p id="teste">Café em moido 10kg. <br> Café torrado e moido -  Café Cheiro de Minas</p>
+								
+								<p class="text-center">
+									<span class="de">De: R$ 160,00</span>&nbsp;&nbsp;Por: <span class="por">R$ 140,00</span>
+								</p>
+								
+								<br>
+								
+								<p class="text-center">
+									<button type="button" class="btn btn-default" data-toggle="modal" data-target="#myModal"><span class="glyphicon glyphicon-eye-open"></span> Detalhes</button>
+									<a href="#" class="btn btn-success" role="button"><span class="glyphicon glyphicon-plus-sign"></span> Comprar</a> 
+								</p>
+							</div>
+						</div>
+					</div>
+					<!--Cafe Moido 3-->
+					<div id="item" codigo="2" class="col-sm-6 col-md-4">
+						<div class="thumbnail">
+							<img data-src="holder.js/100%x200" alt="Cafe Moido" style="height: 200px; width: 100%; display: block;" src="images/cafe-moido3.jpg" data-holder-rendered="true">
+							<div class="caption">
+								<h3 class="text-center color-beje" id="thumbnail-label">Café Moido<a class="anchorjs-link" href="#thumbnail-label"><span class="anchorjs-icon"></span></a></h3>
+								
+								<p id="teste">Café em moido 3kg. <br> Café torrado e moido -  Café Cheiro de Minas</p>
+								
+								<p class="text-center">
+									<span class="de">De: R$ 24,00</span>&nbsp;&nbsp;Por: <span class="por">R$ 14,00</span>
+								</p>
+								
+								<br>
+								
+								<p class="text-center">
+									<button type="button" class="btn btn-default" data-toggle="modal" data-target="#myModal"><span class="glyphicon glyphicon-eye-open"></span> Detalhes</button>
+									<a href="#" class="btn btn-success" role="button"><span class="glyphicon glyphicon-plus-sign"></span> Comprar</a> 
+								</p>
+							</div>
+						</div>
+					</div>
+					<!--Sacas de café -->
+					<div id="item" codigo="4" class="col-sm-6 col-md-4">
+						<div class="thumbnail">
+							<img data-src="holder.js/100%x200" alt="Sacas de café" style="height: 200px; width: 100%; display: block;" src="images/cafe-sacas.jpg" data-holder-rendered="true">
+							<div class="caption">
+								<h3 class="text-center color-beje" id="thumbnail-label">Café em grãos<a class="anchorjs-link" href="#thumbnail-label"><span class="anchorjs-icon"></span></a></h3>
+								
+								<p id="teste">Saca de café em grãos 60kg <br> Café torrado em grãos -  Café Cheiro de Minas</p>
+								
+								<p class="text-center">
+									<span class="de">De: R$ 700,00</span>&nbsp;&nbsp;Por: <span class="por">R$ 500,00</span>
+								</p>
+								
+								<br>
+								
+								<p class="text-center">
+									<button type="button" class="btn btn-default" data-toggle="modal" data-target="#myModal"><span class="glyphicon glyphicon-eye-open"></span> Detalhes</button>
+									<a href="#" class="btn btn-success" role="button"><span class="glyphicon glyphicon-plus-sign"></span> Comprar</a> 
+								</p>
+							</div>
+						</div>
+					</div>
+					<!--Sacas de café moido -->
+					<div id="item" codigo="4" class="col-sm-6 col-md-4">
+						<div class="thumbnail">
+							<img data-src="holder.js/100%x200" alt="Sacas de café" style="height: 200px; width: 100%; display: block;" src="images/cafe-sacas2.jpg" data-holder-rendered="true">
+							<div class="caption">
+								<h3 class="text-center color-beje" id="thumbnail-label">Café Moido<a class="anchorjs-link" href="#thumbnail-label"><span class="anchorjs-icon"></span></a></h3>
+								
+								<p id="teste">Saca de café moido 60kg <br> Café torrado e moido -  Café Cheiro de Minas</p>
+								
+								<p class="text-center">
+									<span class="de">De: R$ 900,00</span>&nbsp;&nbsp;Por: <span class="por">R$ 800,00</span>
+								</p>
+								
+								<br>
+								
+								<p class="text-center">
+									<button type="button" class="btn btn-default" data-toggle="modal" data-target="#myModal"><span class="glyphicon glyphicon-eye-open"></span> Detalhes</button>
+									<a href="#" class="btn btn-success" role="button"><span class="glyphicon glyphicon-plus-sign"></span> Comprar</a> 
+								</p>
+							</div>
+						</div>
+					</div>
+					<!--Sacas de café em grãos Descafeinado-->
+					<div id="item" codigo="4" class="col-sm-6 col-md-4">
+						<div class="thumbnail">
+							<img data-src="holder.js/100%x200" alt="Sacas de café" style="height: 200px; width: 100%; display: block;" src="images/cafe-sacas3.jpg" data-holder-rendered="true">
+							<div class="caption">
+								<h3 class="text-center color-beje" id="thumbnail-label">Café Descafeinado<a class="anchorjs-link" href="#thumbnail-label"><span class="anchorjs-icon"></span></a></h3>
+								
+								<p id="teste">Saca de café em grãos 60kg <br> Café torrado em grãos -  Café Cheiro de Minas</p>
+								
+								<p class="text-center">
+									<span class="de">De: R$ 600,00</span>&nbsp;&nbsp;Por: <span class="por">R$ 500,00</span>
+								</p>
+								
+								<br>
+								
+								<p class="text-center">
+									<button type="button" class="btn btn-default" data-toggle="modal" data-target="#myModal"><span class="glyphicon glyphicon-eye-open"></span> Detalhes</button>
+									
+									<a href="#" class="btn btn-success" role="button"><span class="glyphicon glyphicon-plus-sign"></span> Comprar</a> 
+								</p>
+							</div>
+						</div>
+					</div>
+					
+					<!--Reversa Sacas de café em grãos Descafeinado-->
+					<div id="item" codigo="6" class="col-sm-6 col-md-4">
+						<div class="thumbnail">
+							<img data-src="holder.js/100%x200" alt="Sacas de café" style="height: 200px; width: 100%; display: block;" src="images/cafe-reserva.jpg" data-holder-rendered="true">
+							<div class="caption">
+								<h3 class="text-center color-beje" id="thumbnail-label">Café Moido<a class="anchorjs-link" href="#thumbnail-label"><span class="anchorjs-icon"></span></a></h3>
+								
+								<p id="teste">Saca de café  60kg <br> Café torrado e moido -  Café Cheiro de Minas</p>
+								
+								<p class="text-center">
+									<span class="de">De: R$ 600,00</span>&nbsp;&nbsp;Por: <span class="por">R$ 490,00</span>
+								</p>
+								
+								<br>
+								
+								<p class="text-center">
+									<button type="button" class="btn btn-default" data-toggle="modal" data-target="#myModal"><span class="glyphicon glyphicon-eye-open"></span> Detalhes</button>
+									
+									<a href="#" class="btn btn-success" role="button"><span class="glyphicon glyphicon-plus-sign"></span> Reservar</a> 
+								</p>
+							</div>
+						</div>
+					</div><!--Reversa Sacas de café em grãos Descafeinado-->
+					<div id="item" codigo="6" class="col-sm-6 col-md-4">
+						<div class="thumbnail">
+							<img data-src="holder.js/100%x200" alt="Sacas de café" style="height: 200px; width: 100%; display: block;" src="images/cafe-reserva2.jpg" data-holder-rendered="true">
+							<div class="caption">
+								<h3 class="text-center color-beje" id="thumbnail-label">Café Descafeinado<a class="anchorjs-link" href="#thumbnail-label"><span class="anchorjs-icon"></span></a></h3>
+								
+								<p id="teste">Saca de café moido 10kg <br> Café torrado e moido -  Café Cheiro de Minas</p>
+								
+								<p class="text-center">
+									<span class="de">De: R$ 220,00</span>&nbsp;&nbsp;Por: <span class="por">R$ 200,00</span>
+								</p>
+								
+								<br>
+								
+								<p class="text-center">
+									<button type="button" class="btn btn-default" data-toggle="modal" data-target="#myModal"><span class="glyphicon glyphicon-eye-open"></span> Detalhes</button>
+									
+									<a href="#" class="btn btn-success" role="button"><span class="glyphicon glyphicon-plus-sign"></span> Reservar</a> 
+								</p>
+							</div>
+						</div>
+					</div>
+					
+					
+				</div>
+			</div>
+		
+		</div>
+	</section>
+
+	
+	
+	<!-- Modal -->
+	<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+		<div class="modal-dialog">
+			<div class="modal-content">
+				<div class="modal-header">
+					<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+					<h3 class="modal-title color-beje" id="myModalLabel">Café Cheiro de Minas</h3>
+				</div>
+				<div class="modal-body color-preto">
+					<p>Promoções válidas até o final do segundo semestre de 2018</p>
+				</div>
+				<div class="modal-footer">
+					<button type="button" class="btn btn-default" data-dismiss="modal">Fechar</button>
+					<button type="button" class="btn btn-success"><span class="glyphicon glyphicon-plus-sign"></span> Comprar</button>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="clearfix"></div>
+	
+	<footer class="text-center">
+		<div class="col-sm-12">
+			<div class="barra_divisao visible-xs"></div>
+			&copy; 2015 - Todos direitos reservados.
+		</div>
+	</footer>
+	
+
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="js/jquery/2.1.4/jquery.min.js"></script>
+	
+	<!--- jQuery -->
+	<script src="js/loja.js"></script>
+	
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="js/bootstrap.min.js"></script>
+</body>
+</html>
